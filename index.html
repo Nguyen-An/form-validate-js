@@ -48,13 +48,14 @@
         // Mong muốn của chúng ta
         Validator({
             form: '#form-1',
+            formGroupSelector: '.form-group',
             errorSelector: '.form-message',
             rules:[
                 Validator.isRequired('#fullname', 'Vui lòng nhập vào tên đầy đủ của bạn'),
-                Validator.isRequired('#email'),
+                // Validator.isRequired('#email'),
                 Validator.isRequired('#password'),
                 Validator.isRequired('#password_confirmation'),
-                Validator.isEmail('#email'),
+                // Validator.isEmail('#email'),
                 Validator.minLength('#password', 6),
                 Validator.isConfirmed('#password_confirmation', function(){
                     return document.querySelector('#form-1 #password').value;
